@@ -4,7 +4,7 @@ import Header from "../components/header/Header";
 import MenuBar from "../components/menu-bar/MenuBar";
 import Loader from "../components/loader/Loader";
 import Repositories from "../components/repositories/Repositories";
-import {useDispatch, useSelector} from "../utils/customHooks";
+import {useDispatch, useSelector} from "../utils/reactHooks";
 import {Languages} from "../models/repositoryModel";
 import {useChangeSelectedLanguage} from "../utils/repositoriesHooks";
 

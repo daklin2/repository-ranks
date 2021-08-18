@@ -1,4 +1,4 @@
-import {useSelector} from "../../../utils/customHooks";
+import {useSelector} from "../../../utils/reactHooks";
 import {Languages} from "../../../models/repositoryModel";
 import {useChangeSelectedLanguage} from "../../../utils/repositoriesHooks";
 

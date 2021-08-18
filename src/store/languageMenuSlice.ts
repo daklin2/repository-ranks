@@ -13,7 +13,7 @@ export const getLanguageStats = createAsyncThunk<Array<RepositoryModel>, Languag
         return {
           login: repository.owner.login,
           avatarUrl: repository.owner.avatar_url,
-          repositoryUrl: repository.owner.html_url,
+          repositoryUrl: repository.html_url,
           stars: repository.stargazers_count,
         }
       });
@@ -23,7 +23,6 @@ export const getLanguageStats = createAsyncThunk<Array<RepositoryModel>, Languag
     })
     .catch((err) => {
       dispatch(endLoad());
-      console.log(err.response.data)
       return rejectWithValue(err.response.data);
     });
 });

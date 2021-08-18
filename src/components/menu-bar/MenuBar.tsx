@@ -1,7 +1,7 @@
 import "./MenuBar.style.scss";
 import {listOfLanguages} from "./utils/menuBar.util";
 import MenuBarLanguageElement from "./view/language-element";
-import {useDispatch, useSelector} from "../../utils/customHooks";
+import {useDispatch, useSelector} from "../../utils/reactHooks";
 import {useMemo} from "react";
 import {useChangeSelectedLanguage} from "../../utils/repositoriesHooks";
 
