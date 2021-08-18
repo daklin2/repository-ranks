@@ -1,12 +1,12 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import languageMenuSlice from "./languageMenuSlice";
-import loaderSlice from "./loader";
+import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import menuBarSlice from "./menuBarSlice";
+import loaderSlice from "./loaderSlice";
 
 export const store = configureStore({
-  reducer: {
-    languageMenu: languageMenuSlice,
-    loader: loaderSlice,
-  },
+	reducer: {
+		languageMenu: menuBarSlice,
+		loader: loaderSlice,
+	},
 });
 
 export type AppDispatch = typeof store.dispatch;
