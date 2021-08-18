@@ -1,5 +1,5 @@
 import {changeSelectedLanguage, getLanguageStats} from "../store/languageMenuSlice";
-import {useDispatch} from "./reactHooks";
+import {useDispatch} from "./reactReduxHooks";
 import {Languages} from "../models/repositoryModel";
 
 export const useChangeSelectedLanguage = () => {

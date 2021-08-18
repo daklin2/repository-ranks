@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render Header 1`] = `
+<header
+  className="header"
+>
+  <div
+    className="header__body"
+  >
+    Github Ranks for UBS
+  </div>
+</header>
+`;

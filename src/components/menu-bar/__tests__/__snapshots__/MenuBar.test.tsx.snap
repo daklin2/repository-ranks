@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuBar should render MenuBar 1`] = `
+<div
+  className="menu-bar"
+>
+  <MenuBarLanguageElement
+    key="javascript_0"
+    name="JavaScript"
+    queryName="javascript"
+  />
+  <MenuBarLanguageElement
+    key="typescript_1"
+    name="TypeScript"
+    queryName="typescript"
+  />
+  <MenuBarLanguageElement
+    key="java_2"
+    name="Java"
+    queryName="java"
+  />
+  <MenuBarLanguageElement
+    key="python_3"
+    name="Python"
+    queryName="python"
+  />
+  <MenuBarLanguageElement
+    key="ruby_4"
+    name="Ruby"
+    queryName="ruby"
+  />
+  <MenuBarLanguageElement
+    key="scala_5"
+    name="Scala"
+    queryName="scala"
+  />
+  <MenuBarLanguageElement
+    key="_6"
+    name="All"
+    queryName=""
+  />
+</div>
+`;

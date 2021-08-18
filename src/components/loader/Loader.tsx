@@ -1,5 +1,5 @@
 import "./Loader.style.scss";
-import {useSelector} from "../../utils/reactHooks";
+import {useSelector} from "../../utils/reactReduxHooks";
 
 const Loader = () => {
   const isLoading = useSelector((state) => state.loader.isLoading)

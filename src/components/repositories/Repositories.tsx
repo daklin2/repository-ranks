@@ -1,5 +1,5 @@
 import React, {useMemo} from "react";
-import {useSelector} from "../../utils/reactHooks";
+import {useSelector} from "../../utils/reactReduxHooks";
 import RepositoriesCard from "./card/Card";
 import "./Repositories.style.scss";
 

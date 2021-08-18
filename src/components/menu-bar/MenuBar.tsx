@@ -1,17 +1,15 @@
 import "./MenuBar.style.scss";
 import {listOfLanguages} from "./utils/menuBar.util";
 import MenuBarLanguageElement from "./view/language-element";
-import {useDispatch, useSelector} from "../../utils/reactHooks";
+import { useSelector} from "../../utils/reactReduxHooks";
 import {useMemo} from "react";
-import {useChangeSelectedLanguage} from "../../utils/repositoriesHooks";
 
 const MenuBar = () => {
-  const selectedLanguage = useSelector((state) => state.languageMenu).currentLanguage
-  const loadLanguageStatistic = useChangeSelectedLanguage();
+  const selectedLanguage = useSelector((state) => state.languageMenu.currentLanguage)
 
   const listOfLanguage = useMemo(() => {
-    return listOfLanguages.map((language) => {
-      return <MenuBarLanguageElement name={language.displayName} queryName={language.queryName} />
+    return listOfLanguages.map((language, i) => {
+      return <MenuBarLanguageElement key={language.queryName + `_${i}`} name={language.displayName} queryName={language.queryName} />
     })
   }, [selectedLanguage])
 

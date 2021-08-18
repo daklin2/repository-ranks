@@ -9,6 +9,8 @@ export const getLanguageStats = createAsyncThunk<Array<RepositoryModel>, Languag
 
   return await getTopRepositoriesByLanguage(selectedLanguage)
     .then((response) => {
+
+      console.log(response)
       const parsedData = response.data.items.map((repository: Record<string, any>): RepositoryModel => {
         return {
           login: repository.owner.login,
