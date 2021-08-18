@@ -9,16 +9,13 @@ export const getLanguageStats = createAsyncThunk<Array<RepositoryModel>, Languag
 
   return await getTopRepositoriesByLanguage(selectedLanguage)
     .then((response) => {
-
-      console.log(response)
-      const parsedData = response.data.items.map((repository: Record<string, any>): RepositoryModel => {
-        return {
+      const parsedData = response.data.items.map((repository: Record<string, any>): RepositoryModel => ({
           login: repository.owner.login,
           avatarUrl: repository.owner.avatar_url,
           repositoryUrl: repository.html_url,
           stars: repository.stargazers_count,
-        }
-      });
+        }));
+
       dispatch(endLoad());
 
       return parsedData
@@ -44,7 +41,6 @@ export const languageMenuSlice = createSlice({
   initialState,
   reducers: {
     changeSelectedLanguage: (state, { payload }: { payload: Languages}) => {
-      console.log(state.languageInformation)
       state.currentLanguage = payload;
     }
   },

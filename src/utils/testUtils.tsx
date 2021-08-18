@@ -9,3 +9,18 @@ export const mountWrapper = (store: Store, element: JSX.Element) => {
     </Provider>
   )
 }
+
+export const githubResponseData = {
+  data: {
+    items: [
+      {
+        owner: {
+          login: "dummyLogin",
+          avatar_url: "dummyAvatar",
+        },
+        html_url: "dummyRepository",
+        stargazers_count: 12,
+      }
+    ]
+  }
+}

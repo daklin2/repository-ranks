@@ -14,8 +14,6 @@ const MenuBarLanguageElement = ({ name, queryName }: LanguageElement ) => {
 
     const onClick = () => {
         if (selectedLanguage === queryName) return;
-
-        console.log(queryName);
         loadLanguageStatistic(queryName);
     };
 
