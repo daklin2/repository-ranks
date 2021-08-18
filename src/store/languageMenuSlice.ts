@@ -1,6 +1,5 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {getTopRepositoriesByLanguage} from "../service/github/githubService";
-import {AppState} from "./store";
 import {endLoad, startLoad} from "./loader";
 import {Languages, RepositoryModel} from "../models/repositoryModel";
 
