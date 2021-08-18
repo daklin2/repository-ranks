@@ -4,7 +4,7 @@ import {AppState} from "./store";
 import {endLoad, startLoad} from "./loader";
 import {Languages, RepositoryModel} from "../models/repositoryModel";
 
-export const getLanguageStats = createAsyncThunk<Array<RepositoryModel>, Languages, { state: AppState }>("menu/getLanguage", async (selectedLanguage, { getState, dispatch, rejectWithValue}) => {
+export const getLanguageStats = createAsyncThunk<Array<RepositoryModel>, Languages, { rejectValue: string }>("menu/getLanguage", async (selectedLanguage, { dispatch, rejectWithValue}) => {
   dispatch(startLoad());
 
   return await getTopRepositoriesByLanguage(selectedLanguage)
@@ -49,7 +49,7 @@ export const languageMenuSlice = createSlice({
       state.languageInformation = payload
     });
     builder.addCase(getLanguageStats.rejected, (state, { payload }) => {
-      state.error = payload as any
+      state.error = payload
     });
   }
 })
