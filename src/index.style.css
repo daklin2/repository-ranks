@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    overflow: hidden;
+    color: #201335;
+    background-color: #FFFDED;
+    /*color: #3c3c3c;*/
+}

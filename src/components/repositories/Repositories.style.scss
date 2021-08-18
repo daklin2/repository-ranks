@@ -1,0 +1,18 @@
+.repositories {
+  overflow: scroll;
+  display: flex;
+  margin: 30px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 85vh;
+  flex: 1 0;
+  position: relative;
+
+  &__error-handler {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

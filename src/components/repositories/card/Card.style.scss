@@ -1,0 +1,100 @@
+.card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  align-items: center;
+  box-shadow: 0 4px 10px -4px;
+  background-color: #FFB17A;
+  border-radius: 10px;
+
+  &__rank {
+    color: #FFFDED;
+    font-size: 1.3em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    user-select: none;
+  }
+}
+
+.card__header {
+  background-color: #3c3c3c;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  &__image-container {
+    margin-top: 20px;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 13px;
+
+    & img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+
+  &__nickname {
+    width: 95%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 100;
+    color: #FFFDED;
+    transition: 0.25s;
+  }
+  &__nickname:hover {
+    overflow: visible;
+    transition: 0.25s;
+  }
+}
+
+.card__body {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+
+  &__stars {
+    color: #FFFDED;
+
+    &--star-color {
+      color: #FCE762;
+    }
+
+    & img {
+      width: 15px;
+      height: auto;
+    }
+  }
+
+  &__link-to-repo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFDED;
+    border-radius: 5px;
+    padding: 3px;
+    width: 140px;
+    height: 20px;
+    margin-top: 5px;
+    transition: 0.25s;
+
+    &:hover {
+      //font-size: 1.2em;
+      transition: 0.25s;
+    }
+  }
+}
